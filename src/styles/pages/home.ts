@@ -7,6 +7,32 @@ export const HomeContainer = styled('main', {
     maxWidth: 'calc(100vw - ((100vw - 1180px) / 2))',
     marginLeft: 'auto',
     minHeight: 656,
+
+    svg: {
+        width: 68,
+        height: '100%',
+        position: 'absolute',
+        cursor: 'pointer',
+
+        '&.arrow--disabled': {
+            display: 'none'
+        }
+    },
+
+    '& > svg:nth-of-type(1)': {
+        top: '50%',
+        transform:'translate(0%, -50%)',
+        background: 'linear-gradient(to left, rgba(255, 0, 0, 0), rgb(44 40 40))'
+    },
+
+    '& > svg:nth-of-type(2)': {
+        top: '50%',
+        right: '0',
+        transform:'translate(0%, -50%)',
+        background: 'linear-gradient(to right, rgba(255, 0, 0, 0), rgb(44 40 40))'
+    },
+
+    
 })
 
 export const Product = styled('div', {

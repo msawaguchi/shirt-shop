@@ -8,6 +8,7 @@ import { stripe } from "../../lib/stripe";
 // import { useRouter } from "next/router";
 import { useState } from "react";
 import Head from "next/head";
+import { Button } from "../../components/Button";
 
 interface ProductProps {
     product: {
@@ -59,8 +60,8 @@ export default function Product({ product }:ProductProps) {
                     <h1>{product.name}</h1>
                     <span>{product.price}</span>
 
-                    <p>{product.description}</p>            
-                    <button disabled={isCreatingCheckoutSession} onClick={handleBuyProduct}>buy now</button>
+                    <p>{product.description}</p>
+                    <Button disabled={isCreatingCheckoutSession} onClick={handleBuyProduct}>buy now</Button>            
                 </ProductDetails>
             </ProductContainer>
         </>
